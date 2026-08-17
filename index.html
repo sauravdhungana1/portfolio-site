@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurav Dhungana — ML / AI Engineer</title>
+  <meta name="description" content="Personal portfolio of Saurav Dhungana, an applied ML/AI Engineer based in Kathmandu, Nepal specializing in RAG pipelines, vector embeddings, and full-stack AI products.">
+  <meta name="author" content="Saurav Dhungana">
+  <meta name="theme-color" content="#0E0D0C">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Saurav Dhungana — ML / AI Engineer">
+  <meta property="og:description" content="Applied ML systems, RAG pipelines, embedding search, and AI products. Preparing for graduate study in AI/ML in Germany.">
+  <meta property="og:image" content="assets/hero.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Saurav Dhungana — ML / AI Engineer">
+  <meta property="twitter:description" content="Applied ML systems, RAG pipelines, embedding search, and AI products.">
+
+  <!-- Favicon (Editorial Monogram SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230E0D0C'/><text x='50%' y='62%' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='50' font-weight='bold' fill='%23C9A227'>SD</text></svg>">
+
+  <!-- Google Fonts: Fraunces (Display Serif), Inter (Body), JetBrains Mono (Utility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Noise / Film Grain Texture Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Editorial Top Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="#hero" class="brand" aria-label="Saurav Dhungana - Home">
+        <span class="brand-monogram">SD</span>
+        <span class="brand-divider">/</span>
+        <span class="brand-title">SAURAV DHUNGANA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link"><span class="nav-num">01</span> About</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">02</span> Work</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-num">03</span> Skills</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">04</span> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn-resume-header" id="resumeHeaderBtn">
+          <span>Resume</span>
+          <svg class="btn-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero" aria-label="Introduction">
+      <div class="container hero-container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text / Editorial Column -->
+          <div class="hero-content reveal">
+            <div class="editorial-meta-strip">
+              <span class="meta-tag mono"><span class="meta-pulse"></span>ML / AI ENGINEER</span>
+              <span class="meta-sep" aria-hidden="true">·</span>
+              <span class="meta-location mono">Kathmandu, Nepal</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Saurav <br>
+              <span class="headline-italic">Dhungana</span>
+            </h1>
+
+            <p class="hero-intro">
+              I build applied ML systems — RAG pipelines, embedding search, and full-stack AI products — while preparing for graduate study in AI/ML in Germany.
+            </p>
+
+            <div class="hero-status-pill mono">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+              </svg>
+              <span>Target: Master's in AI/ML · German Public Universities</span>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Work</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>Get in Touch</span>
+              </a>
+              <a href="#resume" class="btn btn-ghost" id="heroResumeLink">
+                <span>Curriculum Vitae</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero-footer-meta mono">
+              <div class="meta-item">
+                <span class="meta-label">FOCUS</span>
+                <span class="meta-value">RAG · Vectors · Full-Stack AI</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">AVAILABILITY</span>
+                <span class="meta-value">Open to Engineering Roles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image / Signature Editorial Portrait -->
+          <div class="hero-visual reveal">
+            <div class="portrait-card">
+              <!-- Editorial Register Marks -->
+              <div class="register-mark reg-tl" aria-hidden="true"></div>
+              <div class="register-mark reg-tr" aria-hidden="true"></div>
+              <div class="register-mark reg-bl" aria-hidden="true"></div>
+              <div class="register-mark reg-br" aria-hidden="true"></div>
+
+              <div class="portrait-frame">
+                <picture>
+                  <source srcset="assets/hero.webp" type="image/webp">
+                  <img 
+                    src="assets/hero.jpg" 
+                    alt="Black and white studio portrait of Saurav Dhungana seated wearing sunglasses with hands clasped" 
+                    class="portrait-img"
+                    fetchpriority="high"
+                    width="1023"
+                    height="1537">
+                </picture>
+                <div class="duotone-tint" aria-hidden="true"></div>
+                <div class="portrait-vignette" aria-hidden="true"></div>
+              </div>
+
+              <div class="portrait-caption mono">
+                <div class="caption-index">FIG. 01 — STUDIO PORTRAIT</div>
+                <div class="caption-sub">SAURAV DHUNGANA / KATHMANDU</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Hairline Section Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="container">
+        <div class="divider-line">
+          <span class="divider-label mono">01 // PROFILE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about-section" id="about" aria-label="About Saurav Dhungana">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <span class="eyebrow mono">01 / ABOUT</span>
+          <h2 class="section-title">The Profile</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Secondary Portrait Column -->
+          <div class="about-visual reveal">
+            <div class="secondary-card">
+              <div class="secondary-frame">
+                <picture>
+                  <source srcset="assets/secondary.webp" type="image/webp">
+                  <img 
+                    src="assets/secondary.jpg" 
+                    alt="Saurav Dhungana leaning thoughtfully against a studio chair" 
+                    class="secondary-img"
+                    loading="lazy"
+                    width="1122"
+                    height="1121">
+                </picture>
+                <div class="duotone-tint" aria-hidden="true"></div>
+              </div>
+              <div class="secondary-caption mono">
+                <span>FIG. 02 — BUILDER IN PRACTICE</span>
+                <span class="accent-text">BCA / APPLIED AI</span>
+              </div>
+            </div>
+
+            <!-- Quick Profile Highlights Card -->
+            <div class="profile-stats-card mono">
+              <div class="stat-row">
+                <span class="stat-key">ACADEMICS</span>
+                <span class="stat-val">BCA Graduate, Nepal</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-key">NEXT STEP</span>
+                <span class="stat-val">M.Sc. AI/ML, Germany</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-key">CORE SPEC</span>
+                <span class="stat-val">Applied ML & RAG Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative Text Column -->
+          <div class="about-narrative reveal">
+            <blockquote class="editorial-quote">
+              "Building applied machine learning systems that transform complex data & language models into practical, high-utility products."
+            </blockquote>
+
+            <div class="narrative-body">
+              <p class="lead-paragraph">
+                I am a BCA graduate from Nepal and a hands-on builder who ships real, end-to-end projects. My work bridges the gap between machine learning mechanics and production-grade software engineering — architecting everything from vector-indexed retrieval pipelines to cross-platform client applications.
+              </p>
+              
+              <p>
+                My professional background also encompasses technical content and copywriting work. This dual discipline provides a rare advantage: the ability to rigorously engineer complex algorithmic systems while maintaining a crystal-clear understanding of product messaging, documentation, and user intuition.
+              </p>
+
+              <p>
+                Currently, I am focused on building toward high-impact ML/AI engineering roles while actively preparing for graduate study (Master's in AI/ML) at public research universities in Germany.
+              </p>
+            </div>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <span class="pillar-num mono">A.</span>
+                <div class="pillar-content">
+                  <h3 class="pillar-title">Applied ML & RAG</h3>
+                  <p class="pillar-desc">Custom embeddings, vector similarity search with pgvector/SQLite, and Gemini API orchestration.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-num mono">B.</span>
+                <div class="pillar-content">
+                  <h3 class="pillar-title">Full-Stack Delivery</h3>
+                  <p class="pillar-desc">High-speed FastAPI backends, asynchronous data scrapers, and React Native mobile frontends.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-num mono">C.</span>
+                <div class="pillar-content">
+                  <h3 class="pillar-title">Clear Communication</h3>
+                  <p class="pillar-desc">Articulating engineering trade-offs, writing clean documentation, and shipping intuitive interfaces.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Hairline Section Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="container">
+        <div class="divider-line">
+          <span class="divider-label mono">02 // SELECTED WORK</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="projects-section" id="projects" aria-label="Featured Projects">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <span class="eyebrow mono">02 / SELECTED WORK</span>
+          <h2 class="section-title">Engineered Products & Systems</h2>
+          <p class="section-subtitle">Real-world RAG pipelines, data platforms, and interactive applications shipped end-to-end.</p>
+        </div>
+
+        <div class="projects-stack">
+          
+          <!-- PROJECT 1: GermanMatch AI (Featured Hero Project) -->
+          <article class="project-card project-featured reveal" id="project-germanmatch">
+            <div class="project-header">
+              <div class="project-meta mono">
+                <span class="project-badge-featured">★ FEATURED SYSTEM</span>
+                <span class="project-num">01 / 04</span>
+              </div>
+              <span class="project-category mono">SAAS PLATFORM · SEMANTIC RAG SEARCH</span>
+            </div>
+
+            <div class="project-grid">
+              <div class="project-main-info">
+                <h3 class="project-title">GermanMatch AI</h3>
+                <p class="project-lead">
+                  SaaS platform helping international students find English-taught Master's programs at German public universities.
+                </p>
+                <div class="project-description">
+                  <p>
+                    Navigating hundreds of German university portals is fragmented and cumbersome for foreign applicants. GermanMatch AI solves this by aggregating degree requirements, scraping curriculum data, and providing high-precision semantic matching based on a student's undergraduate transcript and academic goals.
+                  </p>
+                </div>
+
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <span class="highlight-bullet">▹</span>
+                    <span>Vector search with <strong>pgvector</strong> & <strong>BAAI/bge-small-en-v1.5</strong> dense embeddings.</span>
+                  </div>
+                  <div class="highlight-item">
+                    <span class="highlight-bullet">▹</span>
+                    <span>Context-aware RAG pipeline leveraging the <strong>Gemini API</strong> for synthesized university matches.</span>
+                  </div>
+                  <div class="highlight-item">
+                    <span class="highlight-bullet">▹</span>
+                    <span>Automated web ingestion scrapers with <strong>Playwright</strong> and <strong>BeautifulSoup</strong>.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-sidebar">
+                <div class="sidebar-box">
+                  <div class="box-title mono">TECHNOLOGY STACK</div>
+                  <ul class="tech-tag-list mono">
+                    <li class="tech-tag tag-primary">FastAPI</li>
+                    <li class="tech-tag tag-primary">pgvector</li>
+                    <li class="tech-tag tag-primary">BAAI/bge-small-en-v1.5</li>
+                    <li class="tech-tag">Gemini API (RAG)</li>
+                    <li class="tech-tag">Playwright</li>
+                    <li class="tech-tag">BeautifulSoup</li>
+                    <li class="tech-tag">Python</li>
+                    <li class="tech-tag">PostgreSQL</li>
+                  </ul>
+                </div>
+
+                <div class="project-links">
+                  <a href="https://github.com/sauravdhungana1" target="_blank" rel="noopener noreferrer" class="project-link mono">
+                    <span>GitHub Repository</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                  </a>
+                  <a href="#contact" class="project-link project-link-demo mono">
+                    <span>Live Demo Link</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Second Brain Bot v2 -->
+          <article class="project-card reveal" id="project-second-brain">
+            <div class="project-header">
+              <div class="project-meta mono">
+                <span class="project-num">02 / 04</span>
+                <span class="project-category">PERSONAL KNOWLEDGE RETRIEVAL</span>
+              </div>
+            </div>
+
+            <div class="project-grid-standard">
+              <div class="project-info-block">
+                <h3 class="project-title">Second Brain Bot v2</h3>
+                <p class="project-lead">
+                  Personal knowledge-management RAG assistant designed for intelligent notes retrieval and conversational document querying.
+                </p>
+                <p class="project-subtext">
+                  Ingests heterogeneous notes, bookmarks, and reference texts into localized vector indexes, allowing instant contextual question-answering and synthesis through dense representation retrieval.
+                </p>
+
+                <div class="tech-pill-row mono">
+                  <span class="tech-tag tag-primary">FastAPI</span>
+                  <span class="tech-tag tag-primary">BAAI Embeddings</span>
+                  <span class="tech-tag">Gemini API</span>
+                  <span class="tech-tag">SQLite Vector Search</span>
+                  <span class="tech-tag">Python</span>
+                </div>
+              </div>
+
+              <div class="project-actions-block">
+                <a href="https://github.com/sauravdhungana1" target="_blank" rel="noopener noreferrer" class="project-link mono">
+                  <span>GitHub Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+                <a href="#contact" class="project-link project-link-demo mono">
+                  <span>Live Demo Link</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Ludo App -->
+          <article class="project-card reveal" id="project-ludo-app">
+            <div class="project-header">
+              <div class="project-meta mono">
+                <span class="project-num">03 / 04</span>
+                <span class="project-category">CROSS-PLATFORM MOBILE APPLICATION</span>
+              </div>
+            </div>
+
+            <div class="project-grid-standard">
+              <div class="project-info-block">
+                <h3 class="project-title">Ludo App</h3>
+                <p class="project-lead">
+                  Mobile Ludo game built for the Play Store with responsive board rendering and deterministic game state orchestration.
+                </p>
+                <p class="project-subtext">
+                  Engineered with React Native and Expo, featuring custom dice-rolling animations, turn-based multiplayer mechanics, sound effects, and zero-latency local rule execution.
+                </p>
+
+                <div class="tech-pill-row mono">
+                  <span class="tech-tag tag-primary">React Native</span>
+                  <span class="tech-tag tag-primary">Expo</span>
+                  <span class="tech-tag">JavaScript / ES6+</span>
+                  <span class="tech-tag">Google Play Store</span>
+                </div>
+              </div>
+
+              <div class="project-actions-block">
+                <a href="https://github.com/sauravdhungana1" target="_blank" rel="noopener noreferrer" class="project-link mono">
+                  <span>GitHub Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+                <a href="#contact" class="project-link project-link-demo mono">
+                  <span>Live Demo Link</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: AI-Powered Health Risk Dashboard -->
+          <article class="project-card reveal" id="project-health-dashboard">
+            <div class="project-header">
+              <div class="project-meta mono">
+                <span class="project-num">04 / 04</span>
+                <span class="project-category">PREDICTIVE ML · BCA CAPSTONE</span>
+              </div>
+            </div>
+
+            <div class="project-grid-standard">
+              <div class="project-info-block">
+                <h3 class="project-title">AI-Powered Health Risk Dashboard</h3>
+                <p class="project-lead">
+                  Final year BCA capstone project, dashboard combining machine learning models for clinical health risk indicators.
+                </p>
+                <p class="project-subtext">
+                  Integrates supervised classification pipelines to assess multidimensional clinical parameters (cardiovascular, diabetes, metabolic risk factors) and outputs risk factor assessments with visual metrics.
+                </p>
+
+                <div class="tech-pill-row mono">
+                  <span class="tech-tag tag-primary">Python</span>
+                  <span class="tech-tag tag-primary">Scikit-Learn</span>
+                  <span class="tech-tag">Colab-Trained Models</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">Data Visualization</span>
+                </div>
+              </div>
+
+              <div class="project-actions-block">
+                <a href="https://github.com/sauravdhungana1" target="_blank" rel="noopener noreferrer" class="project-link mono">
+                  <span>GitHub Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+                <a href="#contact" class="project-link project-link-demo mono">
+                  <span>Live Demo Link</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Hairline Section Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="container">
+        <div class="divider-line">
+          <span class="divider-label mono">03 // STACK</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="skills-section" id="skills" aria-label="Technical Skills">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <span class="eyebrow mono">03 / SKILLS</span>
+          <h2 class="section-title">Technical Proficiency</h2>
+          <p class="section-subtitle">Core competencies across artificial intelligence, systems engineering, and client interfaces.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Skill Cluster 1: ML / AI -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-domain-index mono">01</span>
+              <h3 class="skill-domain-title">ML / AI</h3>
+            </div>
+            <p class="skill-domain-desc">Applied machine learning algorithms, semantic search, and retrieval pipelines.</p>
+            <div class="skill-pill-cluster mono">
+              <span class="skill-pill highlight-pill">Python</span>
+              <span class="skill-pill highlight-pill">RAG Pipelines</span>
+              <span class="skill-pill highlight-pill">Embeddings</span>
+              <span class="skill-pill">Vector Search</span>
+              <span class="skill-pill">Gemini API</span>
+              <span class="skill-pill">Scikit-Learn</span>
+            </div>
+          </div>
+
+          <!-- Skill Cluster 2: Backend -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-domain-index mono">02</span>
+              <h3 class="skill-domain-title">Backend</h3>
+            </div>
+            <p class="skill-domain-desc">Robust service development, vectorized databases, and persistent storage.</p>
+            <div class="skill-pill-cluster mono">
+              <span class="skill-pill highlight-pill">FastAPI</span>
+              <span class="skill-pill highlight-pill">PostgreSQL / pgvector</span>
+              <span class="skill-pill">SQLite</span>
+              <span class="skill-pill">RESTful APIs</span>
+              <span class="skill-pill">Data Pipelines</span>
+            </div>
+          </div>
+
+          <!-- Skill Cluster 3: Frontend / Mobile -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-domain-index mono">03</span>
+              <h3 class="skill-domain-title">Frontend / Mobile</h3>
+            </div>
+            <p class="skill-domain-desc">Cross-platform mobile interfaces and lightweight responsive web applications.</p>
+            <div class="skill-pill-cluster mono">
+              <span class="skill-pill highlight-pill">React Native</span>
+              <span class="skill-pill highlight-pill">Expo</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Skill Cluster 4: Tools -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-domain-index mono">04</span>
+              <h3 class="skill-domain-title">Tools & Environment</h3>
+            </div>
+            <p class="skill-domain-desc">Data ingestion automation, version control, and Linux development ecosystems.</p>
+            <div class="skill-pill-cluster mono">
+              <span class="skill-pill highlight-pill">Playwright</span>
+              <span class="skill-pill highlight-pill">BeautifulSoup</span>
+              <span class="skill-pill">Git / GitHub</span>
+              <span class="skill-pill">Linux</span>
+              <span class="skill-pill">Google Colab</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Hairline Section Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="container">
+        <div class="divider-line">
+          <span class="divider-label mono">04 // DISPATCH</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CONTACT / FOOTER SECTION ==================== -->
+    <section class="contact-section" id="contact" aria-label="Contact Information">
+      <div class="container">
+        
+        <div class="contact-card reveal">
+          <div class="contact-content">
+            <div class="contact-header-block">
+              <span class="eyebrow mono">04 / CONTACT</span>
+              <h2 class="contact-title">Let's build something intelligent together.</h2>
+              <p class="contact-lead">
+                I am actively exploring ML/AI engineering roles, collaborative technical builds, and graduate research opportunities in Germany.
+              </p>
+            </div>
+
+            <div class="contact-details-grid">
+              
+              <!-- Email Item with Copy Trigger -->
+              <div class="contact-item">
+                <span class="contact-label mono">DIRECT DISPATCH</span>
+                <div class="contact-action-row">
+                  <a href="mailto:sauravdhungana.official@gmail.com" class="contact-link contact-email" id="emailLink">
+                    sauravdhungana.official@gmail.com
+                  </a>
+                  <button type="button" class="btn-copy-email mono" id="copyEmailBtn" aria-label="Copy email address to clipboard">
+                    <span id="copyEmailText">Copy</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- LinkedIn Item -->
+              <div class="contact-item">
+                <span class="contact-label mono">PROFESSIONAL NETWORK</span>
+                <a href="https://www.linkedin.com/in/sauravdhungana12" target="_blank" rel="noopener noreferrer" class="contact-link external-link mono">
+                  <span>linkedin.com/in/sauravdhungana12</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+              </div>
+
+              <!-- GitHub Item -->
+              <div class="contact-item">
+                <span class="contact-label mono">CODE REPOSITORIES</span>
+                <a href="https://github.com/sauravdhungana1" target="_blank" rel="noopener noreferrer" class="contact-link external-link mono">
+                  <span>github.com/sauravdhungana1</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                </a>
+              </div>
+
+              <!-- Location & Resume -->
+              <div class="contact-item">
+                <span class="contact-label mono">RESIDENCE & CURRICULUM</span>
+                <div class="contact-sub-row">
+                  <span class="location-badge mono">Kathmandu, Nepal</span>
+                  <a href="#" class="btn-resume-download mono" id="resumeDownloadBtn">
+                    <span>Curriculum Vitae (PDF)</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Colophon / Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid mono">
+        <div class="footer-col-left">
+          <span class="footer-brand">SAURAV DHUNGANA</span>
+          <span class="footer-sub">ML / AI ENGINEER · KATHMANDU, NEPAL</span>
+        </div>
+
+        <div class="footer-col-center">
+          <span class="footer-spec">EDITORIAL EDITION 2026</span>
+          <span class="footer-typeset">Set in Fraunces, Inter & JetBrains Mono</span>
+        </div>
+
+        <div class="footer-col-right">
+          <button type="button" class="btn-back-to-top" id="backToTopBtn" aria-label="Scroll back to top of page">
+            <span>Back to top</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9.5 6.5L6 3M6 3L2.5 6.5M6 3V10"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
