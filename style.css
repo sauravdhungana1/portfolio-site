@@ -1090,7 +1090,106 @@ ul, ol {
   background-color: var(--surface-elevated);
 }
 
-/* --- 11. CONTACT SECTION --- */
+/* --- 11. ALSO EXPERIENCED IN (SECONDARY / ADJACENT SKILLS) --- */
+.secondary-skills-section {
+  padding: 1.5rem 0 4rem 0;
+}
+
+.section-heading-compact {
+  margin-bottom: 2.25rem;
+}
+
+.section-title-compact {
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.experienced-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.experienced-card {
+  background-color: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: border-color var(--transition-smooth), transform var(--transition-smooth);
+}
+
+.experienced-card:hover {
+  border-color: var(--hairline-light);
+  transform: translateY(-2px);
+}
+
+.experienced-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.experienced-domain {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.experienced-num {
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.experienced-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.experienced-roles {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.experienced-lead {
+  font-size: 0.86rem;
+  color: #D3CDC2;
+  line-height: 1.55;
+}
+
+.experienced-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.sub-pill {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.55rem;
+  background-color: var(--surface-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.sub-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --- 12. CONTACT SECTION --- */
 .contact-section {
   padding: 3rem 0 6rem 0;
 }
@@ -1360,6 +1459,11 @@ ul, ol {
   .contact-details-grid {
     grid-template-columns: 1fr;
     gap: 1.75rem;
+  }
+
+  .experienced-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .footer-grid {
