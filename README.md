@@ -31,10 +31,12 @@ portfolio-site/
 │   ├── hero.jpg          # Primary studio portrait (Hero)
 │   ├── hero.webp         # Modern WebP portrait asset
 │   ├── secondary.jpg     # Secondary portrait (About section)
-│   └── secondary.webp    # Modern WebP secondary asset
-├── index.html            # Main semantic HTML5 document
-├── style.css             # Vanilla CSS design system & layout
-├── script.js             # Interactions (Scroll progress, reveal, clipboard)
+│   ├── secondary.webp    # Modern WebP secondary asset
+│   ├── resume.pdf        # Embedded Curriculum Vitae PDF document
+│   └── logo/             # Brand favicon and logo assets
+├── index.html            # Main semantic HTML5 document with embedded resume viewer
+├── style.css             # Vanilla CSS design system, hero reveal keyframes, and layout
+├── script.js             # Interactions (3D card tilt, animated number counters, scroll progress)
 ├── SPEC.md               # Original project build specification
 └── README.md             # Project documentation & deployment guide
 ```

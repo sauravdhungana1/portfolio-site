@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollProgress();
   initScrollReveal();
   initActiveNav();
+  initProjectCardTilt();
+  initNumberCounters();
   initCopyEmail();
   initBackToTop();
 });
@@ -154,7 +156,136 @@ function initCopyEmail() {
 }
 
 /**
- * 5. Back to Top Button
+ * 5. Project Card 3D Tilt Effect on Desktop Hover
+ * Lightweight vanilla JS with requestAnimationFrame throttling (skipped on touch/mobile)
+ */
+function initProjectCardTilt() {
+  const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!supportsHover || prefersReducedMotion) return;
+
+  const cards = document.querySelectorAll('.project-card');
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    let rafId = null;
+    let bounds = null;
+
+    const onMouseEnter = () => {
+      bounds = card.getBoundingClientRect();
+      card.style.transition = 'transform 0.08s ease-out, border-color 0.35s ease, box-shadow 0.35s ease';
+      card.style.willChange = 'transform';
+    };
+
+    const onMouseMove = (e) => {
+      if (!bounds) bounds = card.getBoundingClientRect();
+
+      const mouseX = e.clientX - bounds.left;
+      const mouseY = e.clientY - bounds.top;
+      const halfWidth = bounds.width / 2;
+      const halfHeight = bounds.height / 2;
+
+      // Max subtle tilt ~6-7 degrees
+      const rotateX = ((mouseY - halfHeight) / halfHeight) * -6.5;
+      const rotateY = ((mouseX - halfWidth) / halfWidth) * 6.5;
+
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-2px)`;
+      });
+    };
+
+    const onMouseLeave = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      bounds = null;
+      // Smooth cubic-bezier transition easing back to neutral
+      card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease';
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      
+      setTimeout(() => {
+        if (!card.matches(':hover')) {
+          card.style.willChange = 'auto';
+        }
+      }, 500);
+    };
+
+    card.addEventListener('mouseenter', onMouseEnter, { passive: true });
+    card.addEventListener('mousemove', onMouseMove, { passive: true });
+    card.addEventListener('mouseleave', onMouseLeave, { passive: true });
+  });
+}
+
+/**
+ * 6. Animated Number Counters for Project Stats
+ * Counts up from 0 to target on scroll into view with natural ease-out
+ */
+function initNumberCounters() {
+  const counters = document.querySelectorAll('.stat-counter');
+  if (!counters.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    counters.forEach(counter => {
+      const target = counter.getAttribute('data-target');
+      if (target) counter.textContent = target;
+    });
+    return;
+  }
+
+  const animateCount = (counterEl) => {
+    const target = parseFloat(counterEl.getAttribute('data-target'));
+    if (isNaN(target)) return;
+
+    const duration = 1200; // ~1.2s
+    let startTime = null;
+
+    const updateCount = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Cubic ease-out deceleration curve
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(easeOut * target);
+
+      counterEl.textContent = current;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      } else {
+        counterEl.textContent = target;
+      }
+    };
+
+    requestAnimationFrame(updateCount);
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(counter => {
+      const target = counter.getAttribute('data-target');
+      if (target) counter.textContent = target;
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -30px 0px',
+    threshold: 0.15
+  });
+
+  counters.forEach(counter => observer.observe(counter));
+}
+
+/**
+ * 7. Back to Top Button
  */
 function initBackToTop() {
   const backToTopBtn = document.getElementById('backToTopBtn');

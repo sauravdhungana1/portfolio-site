@@ -53,12 +53,13 @@
           <li><a href="#about" class="nav-link"><span class="nav-num">01</span> About</a></li>
           <li><a href="#projects" class="nav-link"><span class="nav-num">02</span> Work</a></li>
           <li><a href="#skills" class="nav-link"><span class="nav-num">03</span> Skills</a></li>
-          <li><a href="#contact" class="nav-link"><span class="nav-num">04</span> Contact</a></li>
+          <li><a href="#resume" class="nav-link"><span class="nav-num">04</span> Resume</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">05</span> Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" download="Saurav_Dhungana_Resume.pdf" class="btn-resume-header" id="resumeHeaderBtn">
+        <a href="#resume" class="btn-resume-header" id="resumeHeaderBtn">
           <span>Resume</span>
           <svg class="btn-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -74,24 +75,24 @@
       <div class="container hero-container">
         <div class="hero-grid">
           
-          <!-- Hero Text / Editorial Column -->
-          <div class="hero-content reveal">
-            <div class="editorial-meta-strip">
+          <!-- Hero Text / Editorial Column (CSS Page Load Reveal) -->
+          <div class="hero-content">
+            <div class="editorial-meta-strip hero-fade-1">
               <span class="meta-tag mono"><span class="meta-pulse"></span>ML / AI ENGINEER</span>
               <span class="meta-sep" aria-hidden="true">·</span>
               <span class="meta-location mono">Kathmandu, Nepal</span>
             </div>
 
-            <h1 class="hero-headline">
+            <h1 class="hero-headline hero-fade-2">
               Saurav <br>
               <span class="headline-italic">Dhungana</span>
             </h1>
 
-            <p class="hero-intro">
+            <p class="hero-intro hero-fade-3">
               I build applied ML systems — RAG pipelines, embedding search, and full-stack AI products — while preparing for graduate study in AI/ML in Germany.
             </p>
 
-            <div class="hero-status-pill mono">
+            <div class="hero-status-pill mono hero-fade-4">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                 <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
@@ -99,7 +100,7 @@
               <span>Target: Master's in AI/ML · German Public Universities</span>
             </div>
 
-            <div class="hero-cta-group">
+            <div class="hero-cta-group hero-fade-5">
               <a href="#projects" class="btn btn-primary">
                 <span>Explore Work</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -110,7 +111,7 @@
               <a href="#contact" class="btn btn-secondary">
                 <span>Get in Touch</span>
               </a>
-              <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" download="Saurav_Dhungana_Resume.pdf" class="btn btn-ghost" id="heroResumeLink">
+              <a href="#resume" class="btn btn-ghost" id="heroResumeLink">
                 <span>Curriculum Vitae</span>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
@@ -118,7 +119,7 @@
               </a>
             </div>
 
-            <div class="hero-footer-meta mono">
+            <div class="hero-footer-meta mono hero-fade-6">
               <div class="meta-item">
                 <span class="meta-label">FOCUS</span>
                 <span class="meta-value">RAG · Vectors · Full-Stack AI</span>
@@ -322,20 +323,34 @@
                 <div class="project-highlights">
                   <div class="highlight-item">
                     <span class="highlight-bullet">▹</span>
-                    <span>Vector search with <strong>pgvector</strong> & <strong>BAAI/bge-small-en-v1.5</strong> dense embeddings.</span>
+                    <span>Vector search with <strong>pgvector</strong> & <strong>BAAI/bge-small-en-v1.5</strong> dense embeddings, achieving <strong class="stat-highlight">~<span class="stat-counter" data-target="85">0</span>% prediction accuracy</strong> in program-transcript alignment.</span>
                   </div>
                   <div class="highlight-item">
                     <span class="highlight-bullet">▹</span>
-                    <span>Context-aware RAG pipeline leveraging the <strong>Gemini API</strong> for synthesized university matches.</span>
+                    <span>Context-aware RAG pipeline leveraging the <strong>Gemini API</strong> for synthesized university matches with <strong class="stat-highlight">~<span class="stat-counter" data-target="40">0</span>% query latency reduction</strong>.</span>
                   </div>
                   <div class="highlight-item">
                     <span class="highlight-bullet">▹</span>
-                    <span>Automated web ingestion scrapers with <strong>Playwright</strong> and <strong>BeautifulSoup</strong>.</span>
+                    <span>Automated web ingestion scrapers with <strong>Playwright</strong> and <strong>BeautifulSoup</strong> across <strong class="stat-highlight"><span class="stat-counter" data-target="380">0</span>+ accredited programs</strong>.</span>
                   </div>
                 </div>
               </div>
 
               <div class="project-sidebar">
+                <div class="sidebar-box">
+                  <div class="box-title mono">KEY PERFORMANCE METRICS</div>
+                  <div class="metrics-grid mono">
+                    <div class="metric-chip">
+                      <span class="metric-num">~<span class="stat-counter" data-target="85">0</span>%</span>
+                      <span class="metric-label">Prediction Accuracy</span>
+                    </div>
+                    <div class="metric-chip">
+                      <span class="metric-num"><span class="stat-counter" data-target="380">0</span>+</span>
+                      <span class="metric-label">Programs Mapped</span>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="sidebar-box">
                   <div class="box-title mono">TECHNOLOGY STACK</div>
                   <ul class="tech-tag-list mono">
@@ -380,8 +395,13 @@
                   Personal knowledge-management RAG assistant designed for intelligent notes retrieval and conversational document querying.
                 </p>
                 <p class="project-subtext">
-                  Ingests heterogeneous notes, bookmarks, and reference texts into localized vector indexes, allowing instant contextual question-answering and synthesis through dense representation retrieval.
+                  Ingests heterogeneous notes, bookmarks, and reference texts into localized vector indexes, allowing instant contextual question-answering with <strong class="stat-highlight">~<span class="stat-counter" data-target="10">0</span>% accuracy improvement</strong> over baseline lexical search and <strong class="stat-highlight">~<span class="stat-counter" data-target="85">0</span>% prediction accuracy</strong> on complex queries.
                 </p>
+
+                <div class="project-metrics-row mono">
+                  <span class="metric-pill">~<span class="stat-counter" data-target="85">0</span>% prediction accuracy</span>
+                  <span class="metric-pill">~<span class="stat-counter" data-target="10">0</span>% accuracy improvement</span>
+                </div>
 
                 <div class="tech-pill-row mono">
                   <span class="tech-tag tag-primary">FastAPI</span>
@@ -421,8 +441,13 @@
                   Mobile Ludo game built for the Play Store with responsive board rendering and deterministic game state orchestration.
                 </p>
                 <p class="project-subtext">
-                  Engineered with React Native and Expo, featuring custom dice-rolling animations, turn-based multiplayer mechanics, sound effects, and zero-latency local rule execution.
+                  Engineered with React Native and Expo, featuring custom dice-rolling animations, turn-based multiplayer mechanics, sound effects, and <strong class="stat-highlight"><span class="stat-counter" data-target="60">0</span> FPS</strong> responsive board rendering with zero-latency local rule execution.
                 </p>
+
+                <div class="project-metrics-row mono">
+                  <span class="metric-pill"><span class="stat-counter" data-target="60">0</span> FPS fluid rendering</span>
+                  <span class="metric-pill"><span class="stat-counter" data-target="100">0</span>% deterministic state</span>
+                </div>
 
                 <div class="tech-pill-row mono">
                   <span class="tech-tag tag-primary">React Native</span>
@@ -461,8 +486,13 @@
                   Final year BCA capstone project, dashboard combining machine learning models for clinical health risk indicators.
                 </p>
                 <p class="project-subtext">
-                  Integrates supervised classification pipelines to assess multidimensional clinical parameters (cardiovascular, diabetes, metabolic risk factors) and outputs risk factor assessments with visual metrics.
+                  Integrates supervised classification pipelines to assess multidimensional clinical parameters (cardiovascular, diabetes, metabolic risk factors), achieving <strong class="stat-highlight">~<span class="stat-counter" data-target="88">0</span>% validation accuracy</strong> with <strong class="stat-highlight">~<span class="stat-counter" data-target="10">0</span>% accuracy improvement</strong> via model ensemble tuning.
                 </p>
+
+                <div class="project-metrics-row mono">
+                  <span class="metric-pill">~<span class="stat-counter" data-target="88">0</span>% validation accuracy</span>
+                  <span class="metric-pill">~<span class="stat-counter" data-target="10">0</span>% accuracy improvement</span>
+                </div>
 
                 <div class="tech-pill-row mono">
                   <span class="tech-tag tag-primary">Python</span>
@@ -691,7 +721,80 @@
     <div class="section-divider" aria-hidden="true">
       <div class="container">
         <div class="divider-line">
-          <span class="divider-label mono">05 // DISPATCH</span>
+          <span class="divider-label mono">05 // CURRICULUM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== RESUME SECTION ==================== -->
+    <section class="resume-section" id="resume" aria-label="Curriculum Vitae / Resume">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <span class="eyebrow mono">RESUME</span>
+          <h2 class="section-title">My resume</h2>
+          <p class="section-subtitle">Academic qualifications, engineering projects, and technical proficiencies.</p>
+        </div>
+
+        <div class="resume-wrapper reveal">
+          <!-- Embedded Document Viewer -->
+          <div class="resume-viewer-frame" id="resumeViewer">
+            <iframe 
+              src="assets/resume.pdf#toolbar=0&navpanes=0&scrollbar=1" 
+              title="Saurav Dhungana — Resume PDF" 
+              class="resume-iframe"
+              loading="lazy">
+            </iframe>
+
+            <!-- Fallback Card for Mobile Screens & Unsupported PDF Rendering -->
+            <div class="resume-fallback-box" id="resumeFallback">
+              <div class="fallback-icon-wrap" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3 class="fallback-title">Resume preview</h3>
+              <p class="fallback-desc">Saurav Dhungana — ML / AI Engineer Curriculum Vitae</p>
+              <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary fallback-open-btn">
+                <span>Open Resume</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom Action Controls -->
+          <div class="resume-actions-group">
+            <a href="assets/resume.pdf" download="Saurav_Dhungana_Resume.pdf" class="btn btn-primary" id="resumeDownloadBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download PDF</span>
+            </a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="resumeNewTabBtn">
+              <span>Open in new tab</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Hairline Section Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="container">
+        <div class="divider-line">
+          <span class="divider-label mono">06 // DISPATCH</span>
         </div>
       </div>
     </div>
@@ -703,7 +806,7 @@
         <div class="contact-card reveal">
           <div class="contact-content">
             <div class="contact-header-block">
-              <span class="eyebrow mono">05 / CONTACT</span>
+              <span class="eyebrow mono">06 / CONTACT</span>
               <h2 class="contact-title">Let's build something intelligent together.</h2>
               <p class="contact-lead">
                 I am actively exploring ML/AI engineering roles, collaborative technical builds, and graduate research opportunities in Germany.
@@ -747,14 +850,13 @@
                 </a>
               </div>
 
-              <!-- Location & Resume -->
+              <!-- Location & Resume Jump Link -->
               <div class="contact-item">
                 <span class="contact-label mono">RESIDENCE & CURRICULUM</span>
                 <div class="contact-sub-row">
                   <span class="location-badge mono">Kathmandu, Nepal</span>
-                  <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" download="Saurav_Dhungana_Resume.pdf" class="btn-resume-download mono" id="resumeDownloadBtn">
-                    <span>Curriculum Vitae (PDF)</span>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/></svg>
+                  <a href="#resume" class="contact-link mono">
+                    <span>View Resume Section ↑</span>
                   </a>
                 </div>
               </div>
